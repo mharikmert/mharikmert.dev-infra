@@ -1,0 +1,10 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: test-repo
+  namespace: flux-system
+spec:
+  image: mharikmert/test-busybox
+  interval: 1m0s
+
