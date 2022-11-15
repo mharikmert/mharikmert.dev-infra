@@ -5,6 +5,6 @@ metadata:
   name: test-repo
   namespace: flux-system
 spec:
-  image: mharikmert/test-busybox
+  image: mharikmert/busybox
   interval: 1m0s
 
