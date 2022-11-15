@@ -13,7 +13,7 @@ spec:
         app: test-busybox
     spec: 
       containers: 
-        - image: mharikmert/busybox
+        - image: mharikmert/busybox:latest
           name: test-busybox 
           command: 
           - /bin/sh
