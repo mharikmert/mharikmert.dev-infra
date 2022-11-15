@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: test-busybox
+spec: 
+  selector: 
+    matchLabels: 
+      app: test-busybox
+  template: 
+    metadata: 
+      labels: 
+        app: test-busybox
+    spec: 
+      containers: 
+        - image: mharikmert/busybox:v1.0.0
+          name: test-busybox 
+          command: 
+          - /bin/sh
+          - -c 
+          - echo "I'm the first version of the image, v1.0.0" 
