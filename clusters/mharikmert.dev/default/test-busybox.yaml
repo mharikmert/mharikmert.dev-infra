@@ -13,10 +13,5 @@ spec:
         app: test-busybox
     spec: 
       containers: 
-        - image: mharikmert/busybox:latest
+        - image: mharikmert/busybox:v1.0.2
           name: test-busybox 
-          command: 
-          - /bin/sh
-          - -c 
-          - echo "I'm the first version of the image, v1.0.0" 
-      imagePullPolicy: Always
