@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: test-busybox
+    name: test-repo
   policy:
     semver:
       range: 1.0.x
