@@ -13,5 +13,5 @@ spec:
         app: test-busybox
     spec:
       containers:
-        - image: mharikmert/busybox:v1.0.4 # {"$imagepolicy": "flux-system:test-busybox-policy"}
+        - image: mharikmert/busybox:v1.0.5 # {"$imagepolicy": "flux-system:test-busybox-policy"}
           name: test-busybox
