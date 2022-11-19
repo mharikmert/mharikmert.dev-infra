@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: test-busybox
   namespace: default
-spec: 
-  selector: 
-    matchLabels: 
+spec:
+  selector:
+    matchLabels:
       app: test-busybox
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         app: test-busybox
-    spec: 
-      containers: 
-        - image: mharikmert/busybox:v1.0.2 # {"$imagepolicy": "flux-system:test-busybox-policy"}
-          name: test-busybox 
+    spec:
+      containers:
+        - image: mharikmert/busybox:v1.0.4 # {"$imagepolicy": "flux-system:test-busybox-policy"}
+          name: test-busybox
