@@ -19,7 +19,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: mharikmert.dev-infra
+    name: test-repo
   update:
     path: ./clusters/mharikmert.dev/default
     strategy: Setters
