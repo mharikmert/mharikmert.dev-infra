@@ -19,8 +19,8 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: test-repo
+    name: flux-system
   update:
-    path: ./clusters/mharikmert.dev/default
+    path: ./clusters/mharikmert.dev
     strategy: Setters
 
