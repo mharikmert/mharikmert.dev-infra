@@ -21,6 +21,6 @@ spec:
     kind: GitRepository
     name: flux-system
   update:
-    path: ./clusters/mharikmert.dev
+    path: ./clusters/mharikmert.dev/default
     strategy: Setters
 
