@@ -1,0 +1,37 @@
+--- # ---
+# apiVersion: image.toolkit.fluxcd.io/v1beta1
+# kind: ImageRepository
+# metadata:
+#   name: home
+#   namespace: flux-system
+# spec:
+#   image: ghcr.io/mharikmert/mharikmert.dev
+#   interval: 1m0s
+
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: blog
+  namespace: flux-system
+spec:
+  image: ghcr.io/mharikmert/blog
+  interval: 1m0s
+# ---
+# apiVersion: image.toolkit.fluxcd.io/v1beta1
+# kind: ImageRepository
+# metadata:
+#   name: portal-frontend
+#   namespace: flux-system
+# spec:
+#   image: ghcr.io/mharikmert/portal-client
+#   interval: 1m0s
+
+# ---
+# apiVersion: image.toolkit.fluxcd.io/v1beta1
+# kind: ImageRepository
+# metadata:
+#   name: portal-backend
+#   namespace: flux-system
+# spec:
+#   image: ghcr.io/mharikmert/portal-api
+#   interval: 1m0s

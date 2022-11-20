@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-deploy
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: blog
+  template:
+    metadata:
+      labels:
+        app: blog
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/blog:v0.0.3 # {"$imagepolicy": "flux-system:blog-image-policy"}
+          name: blog-container
