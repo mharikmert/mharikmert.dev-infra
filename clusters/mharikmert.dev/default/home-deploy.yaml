@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-deploy
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: home
+  template:
+    metadata:
+      labels:
+        app: home
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/mharikmert.dev:v0.0.1 # {"$imagepolicy": "flux-system:home-image-policy"}
+          name: home-container
