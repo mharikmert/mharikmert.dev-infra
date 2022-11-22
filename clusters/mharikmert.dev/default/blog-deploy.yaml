@@ -13,5 +13,5 @@ spec:
         app: blog
     spec:
       containers:
-        - image: ghcr.io/mharikmert/blog:v0.0.4 # {"$imagepolicy": "flux-system:blog-image-policy"}
+        - image: ghcr.io/mharikmert/blog:v0.0.5 # {"$imagepolicy": "flux-system:blog-image-policy"}
           name: blog-container
