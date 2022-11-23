@@ -13,7 +13,7 @@ spec:
         app: blog
     spec:
       containers:
-        - image: ghcr.io/mharikmert/blog:v0.0.6 # {"$imagepolicy": "flux-system:blog-image-policy"}
+        - image: ghcr.io/mharikmert/blog:v0.0.7 # {"$imagepolicy": "flux-system:blog-image-policy"}
           name: blog-container
           imagePullPolicy: Always
           ports:
