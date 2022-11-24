@@ -7,5 +7,5 @@ spec:
   imageRepositoryRef:
     name: blog
   policy:
-    alpabetical:
+    numerical:
       order: asc
