@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal-backend-deploy
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: portal-backend
+  template:
+    metadata:
+      labels:
+        app: portal-backend
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/portal-backend:v0.0.1 # {"$imagepolicy": "flux-system:portal-backend-image-policy"}
+          name: portal-backend-container
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: backend
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: portal-be-prod-config
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 30
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal-frontend-deploy
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: portal-frontend
+  template:
+    metadata:
+      labels:
+        app: portal-frontend
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/portal-frontend:v0.0.1 # {"$imagepolicy": "flux-system:portal-frontend-image-policy"}
+          name: portal-frontend-container
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              name: frontend
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: portal-fe-prod-config

@@ -1,0 +1,26 @@
+# Backend image policy
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: portal-backend-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: portal-backend
+  policy:
+    numerical:
+      order: asc
+
+---
+# Frontend image policy
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: portal-frontend-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: portal-frontend
+  policy:
+    numerical:
+      order: asc

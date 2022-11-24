@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: home-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: home
+  policy:
+    numerical:
+      order: asc

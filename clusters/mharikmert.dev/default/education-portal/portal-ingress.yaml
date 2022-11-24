@@ -1,0 +1,31 @@
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      nginx.ingress.kubernetes.io/enable-cors: "true"
+      nginx.ingress.kubernetes.io/rewrite-target: /
+    name: portal-ingress
+    namespace: default
+  spec:
+    ingressClassName: nginx
+    rules:
+      - host: portal-demo.mharikmert.dev
+        http:
+          paths:
+            - backend:
+                service:
+                  name: portal-frontend-svc
+                  port:
+                    number: 80
+              path: /
+              pathType: Prefix
+      - host: portal-backend.mharikmert.dev
+        http:
+          paths:
+            - backend:
+                service:
+                  name: portal-backend-svc
+                  port:
+                    number: 8080
+              path: /
+              pathType: Prefix

@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: blog-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: blog
+  policy:
+    alpabetical:
+      order: asc
