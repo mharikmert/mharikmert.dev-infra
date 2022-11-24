@@ -7,5 +7,5 @@ spec:
   imageRepositoryRef:
     name: home
   policy:
-    numerical:
-      order: asc
+    semver:
+      range: 0.x.x

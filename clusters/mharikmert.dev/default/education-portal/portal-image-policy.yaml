@@ -8,8 +8,8 @@ spec:
   imageRepositoryRef:
     name: portal-backend
   policy:
-    numerical:
-      order: asc
+    semver:
+      range: 0.x.x
 
 ---
 # Frontend image policy
@@ -22,5 +22,5 @@ spec:
   imageRepositoryRef:
     name: portal-frontend
   policy:
-    numerical:
-      order: asc
+    semver:
+      range: 0.x.x
