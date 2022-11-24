@@ -13,7 +13,7 @@ spec:
         app: portal-backend
     spec:
       containers:
-        - image: ghcr.io/mharikmert/portal-backend:v0.0.1 # {"$imagepolicy": "flux-system:portal-backend-image-policy"}
+        - image: ghcr.io/mharikmert/portal-backend:v0.0.3 # {"$imagepolicy": "flux-system:portal-backend-image-policy"}
           name: portal-backend-container
           imagePullPolicy: IfNotPresent
           ports:
@@ -35,7 +35,6 @@ spec:
               port: 8080
             initialDelaySeconds: 30
             periodSeconds: 30
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -52,7 +51,7 @@ spec:
         app: portal-frontend
     spec:
       containers:
-        - image: ghcr.io/mharikmert/portal-frontend:v0.0.1 # {"$imagepolicy": "flux-system:portal-frontend-image-policy"}
+        - image: ghcr.io/mharikmert/portal-frontend:v0.0.3 # {"$imagepolicy": "flux-system:portal-frontend-image-policy"}
           name: portal-frontend-container
           imagePullPolicy: IfNotPresent
           ports:
