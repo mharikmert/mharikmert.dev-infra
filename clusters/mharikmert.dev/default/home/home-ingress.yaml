@@ -11,7 +11,7 @@ spec:
         paths:
           - backend:
               service:
-                name: home-service
+                name: home-svc
                 port:
                   number: 80
             path: /
