@@ -13,7 +13,7 @@ spec:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
-      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+      messageTemplate: "{{range .Updated.Images}}{{println .}}{{end}}"
     push:
       branch: master
   interval: 1m0s
@@ -21,6 +21,5 @@ spec:
     kind: GitRepository
     name: flux-system
   update:
-    path: ./clusters/mharikmert.dev
+    path: ./clusters/mharikmert.dev/flux-system
     strategy: Setters
-

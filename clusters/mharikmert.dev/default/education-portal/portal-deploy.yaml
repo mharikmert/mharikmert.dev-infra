@@ -4,6 +4,7 @@ metadata:
   name: portal-backend-deploy
   namespace: default
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: portal-backend
@@ -42,6 +43,7 @@ metadata:
   name: portal-frontend-deploy
   namespace: default
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: portal-frontend

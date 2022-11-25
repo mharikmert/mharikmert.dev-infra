@@ -4,6 +4,7 @@ metadata:
   name: home-deploy
   namespace: default
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: home
