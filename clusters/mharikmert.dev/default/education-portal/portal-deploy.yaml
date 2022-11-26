@@ -53,7 +53,7 @@ spec:
         app: portal-frontend
     spec:
       containers:
-        - image: ghcr.io/mharikmert/portal-frontend:v0.0.8 # {"$imagepolicy": "flux-system:portal-frontend-image-policy"}
+        - image: ghcr.io/mharikmert/portal-frontend:v0.0.9 # {"$imagepolicy": "flux-system:portal-frontend-image-policy"}
           name: portal-frontend-container
           imagePullPolicy: IfNotPresent
           ports:
