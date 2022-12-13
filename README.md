@@ -15,7 +15,4 @@ flux bootstrap github \
 
 
 ## Architecture
-
-![infra](https://user-images.githubusercontent.com/42295478/204051062-d51bccc5-2428-4a57-8b6a-35ef559e52ad.svg)
-
-<!-- TODO: Add flux-system components and image update automation -->
+![infra drawio](https://user-images.githubusercontent.com/42295478/207407608-9fe26ea4-3ffa-4c86-bf99-319ccb477827.svg)
