@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployments-deploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployments
+  template:
+    metadata:
+      labels:
+        app: deployments
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/deployments:v0.0.1 # {"$imagepolicy": "flux-system:deployments-image-policy"}
+          name: deployments-container
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
