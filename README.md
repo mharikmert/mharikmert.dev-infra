@@ -15,4 +15,5 @@ flux bootstrap github \
 
 
 ## Architecture
-![infra drawio](https://user-images.githubusercontent.com/42295478/207407608-9fe26ea4-3ffa-4c86-bf99-319ccb477827.svg)
+![infra drawio](https://user-images.githubusercontent.com/42295478/213651979-c0df1cdc-4a58-4697-9c6b-ac36693a0d56.svg)
+
