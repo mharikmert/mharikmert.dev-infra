@@ -12,7 +12,5 @@ flux bootstrap github \
   --read-write-key \
   --personal
   ```
-
-
 ## Architecture
-![infra](./infra.drawio.svg)
+You can view the architecture from https://infra.mharikmert.dev
