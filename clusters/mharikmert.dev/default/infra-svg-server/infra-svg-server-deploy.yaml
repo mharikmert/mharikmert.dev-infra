@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infra-svg-server-deploy
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: infra-svg-server
+  template:
+    metadata:
+      labels:
+        app: infra-svg-server
+    spec:
+      containers:
+        - image: ghcr.io/mharikmert/infra-svg-server:v0.0.1 # {"$imagepolicy": "flux-system:infra-svg-server-image-policy"}
+          name: infra-svg-server-container
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
