@@ -13,7 +13,7 @@ spec:
         app: infra-svg-server
     spec:
       containers:
-        - image: ghcr.io/mharikmert/infra-svg-server:v0.0.3 # {"$imagepolicy": "flux-system:infra-svg-server-image-policy"}
+        - image: ghcr.io/mharikmert/infra-svg-server:v0.0.4 # {"$imagepolicy": "flux-system:infra-svg-server-image-policy"}
           name: infra-svg-server-container
           imagePullPolicy: Always
           ports:
