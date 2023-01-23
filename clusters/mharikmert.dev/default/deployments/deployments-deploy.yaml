@@ -14,7 +14,7 @@ spec:
         app: deployments
     spec:
       containers:
-        - image: ghcr.io/mharikmert/deployments:v0.0.3 # {"$imagepolicy": "flux-system:deployments-image-policy"}
+        - image: ghcr.io/mharikmert/deployments:v0.0.4 # {"$imagepolicy": "flux-system:deployments-image-policy"}
           name: deployments-container
           imagePullPolicy: Always
           ports:
