@@ -14,5 +14,5 @@ spec:
         app: home
     spec:
       containers:
-        - image: ghcr.io/mharikmert/mharikmert.dev:v0.0.3 # {"$imagepolicy": "flux-system:home-image-policy"}
+        - image: ghcr.io/mharikmert/mharikmert.dev:v0.0.4 # {"$imagepolicy": "flux-system:home-image-policy"}
           name: home-container
