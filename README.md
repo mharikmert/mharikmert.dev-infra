@@ -1,5 +1,5 @@
 # mharikmert.dev-infra
-Continuous delivery for [mharikmert.dev](https://mharikmert.dev)'s infrastructure using FluxCD and GitOps on Kubernetes
+Continuous delivery workflow for [mharikmert.dev](https://mharikmert.dev)'s infrastructure using FluxCD and GitOps on Kubernetes
 
 ## Flux Bootstrap command with extra-components
 ```bash
