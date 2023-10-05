@@ -10,7 +10,7 @@ flux bootstrap github \
   --branch=master \
   --path=clusters/mharikmert.dev \
   --read-write-key \
-  --personal
+  --version=v2.0.0 # set the toolkit version to avoid upgrading the latest version in each bootstrap. 
   ```
 ## Architecture
 You can view the architecture from https://infra.mharikmert.dev
